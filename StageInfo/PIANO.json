@@ -1,0 +1,29 @@
+{
+  "Name": "P.I.A.N.O",
+  "Music": "Synthesia Undertale - Megalovania 82,000  Notes Black MIDI",
+  "BattlePhase":[
+    { "Time":0, "Phase":"BossAttack"},
+    { "Time":65, "Phase":"PlayerAttack"}
+  ],
+  "BossSkills": [
+    { "Time": 11.5,
+      "Skill": "Ring_00",
+      "SkillInfo":{
+        "Target": "Boss",
+        "Position": [0.0,0.0,0.0],
+        "Rotation": [0.0,0.0,0.0],
+        "Velocity": 3.0
+      }
+    },
+    { "Time": 13.0,
+      "Skill": "Ring_01",
+      "SkillInfo":{
+        "Target": "Boss",
+        "Position": [0.0,0.0,0.0],
+        "Rotation": [0.0,0.0,0.0],
+        "Velocity": 3.0,
+        "RingRange": 75
+      }
+    }
+  ]
+}
