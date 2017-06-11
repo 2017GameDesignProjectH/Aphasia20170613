@@ -13,7 +13,7 @@ public class BossController : MonoBehaviour {
 	// Update is called once per frame
 	void Update () {
 		if (isActive) {
-			if (skillNum < bossSkills.Length && bossSkills [skillNum].Time <= stageMusic.time) {
+			while (skillNum < bossSkills.Length && bossSkills [skillNum].Time <= stageMusic.time) {
 				GameObject obj = (GameObject)Instantiate (Resources.Load ("Prefabs/Skills/" + bossSkills [skillNum].SkillName));
 				obj.SendMessage ("SetSkillInfo", bossSkills [skillNum].SkillInfo);
 				skillNum = skillNum + 1;

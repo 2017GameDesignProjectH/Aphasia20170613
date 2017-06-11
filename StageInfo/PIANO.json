@@ -6,23 +6,49 @@
     { "Time":65, "Phase":"PlayerAttack"}
   ],
   "BossSkills": [
-    { "Time": 11.5,
+    { "Time": 5.0,
+      "Skill": "Bloom_00",
+      "SkillInfo":{
+        "Target": "Boss", 
+        "Position": [0.0,0.0,0.0],
+        "DelayTime": 1.0,
+        "Call_Ring_00":{
+          "Target": "None",
+          "Position": [0.0,0.0,0.0],
+          "Rotation": [0.0,0.0,0.0],
+          "RotateSpeed": 0.0,
+          "Velocity": 8.0
+        }
+      }
+    },
+    { "Time": 6.5,
       "Skill": "Ring_00",
       "SkillInfo":{
         "Target": "Boss",
         "Position": [0.0,0.0,0.0],
         "Rotation": [0.0,0.0,0.0],
+        "RotateSpeed": 0.0,
         "Velocity": 3.0
       }
     },
-    { "Time": 13.0,
+    { "Time": 7.0,
       "Skill": "Ring_01",
       "SkillInfo":{
         "Target": "Boss",
         "Position": [0.0,0.0,0.0],
-        "Rotation": [0.0,0.0,0.0],
+        "Rotation": [0.0,30.0,0.0],
+        "RotateSpeed": 0.0,
         "Velocity": 3.0,
         "RingRange": 75
+      }
+    },
+    { "Time": 8.0,
+      "Skill": "Laser_00",
+      "SkillInfo":{
+        "Target": "Boss",
+        "Position": [0.0,0.0,0.0],
+        "Rotation": [0.0,90.0,0.0],
+        "RotateSpeed": 20.0
       }
     }
   ]
