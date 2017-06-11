@@ -1,0 +1,119 @@
+{
+  "Name": "P.I.A.N.O",
+  "Music": "Synthesia Undertale - Megalovania 82,000  Notes Black MIDI",
+  "BattlePhase":[
+    { "Time":0, "Phase":"BossAttack"},
+    { "Time":65, "Phase":"PlayerAttack"}
+  ],
+  "BossSkills": [
+    { "Time": 1.0,
+      "Skill": "Bloom_00",
+      "SkillInfo":{
+        "Target": "Boss", 
+        "DestroyTime": 1.0,
+        "Position": [0.0,0.0,0.0],
+        "DelayTime": 1.0,
+        "Call_Ring_00":{
+          "Target": "None",
+          "DestroyTime": 20.0,
+          "Position": [0.0,0.0,0.0],
+          "Rotation": [0.0,0.0,0.0],
+          "RotateSpeed": 0.0,
+          "Velocity": 4.0
+        }
+      }
+    },
+    { "Time": 10.0,
+      "Skill": "Bloom_01",
+      "SkillInfo":{
+        "Target": "Boss", 
+        "DestroyTime": 7.0,
+        "Position": [0.0,0.0,0.0],
+        "DelayTime": 1.0,
+        "RotateSpeed": 60.0,
+        "CallDeltaTime": 0.3,
+        "CallNum": 20,
+        "Call_Ring_00":{
+          "Target": "None",
+          "DestroyTime": 20.0,
+          "Position": [0.0,0.0,0.0],
+          "Rotation": [0.0,0.0,0.0],
+          "RotateSpeed": 0.0,
+          "Velocity": 3.0
+        }
+      }
+    },
+    { "Time": 26.5,
+      "Skill": "Ring_00",
+      "SkillInfo":{
+        "Target": "Boss",
+        "DestroyTime": 20.0,
+        "Position": [0.0,0.0,0.0],
+        "Rotation": [0.0,0.0,0.0],
+        "RotateSpeed": 0.0,
+        "Velocity": 3.0
+      }
+    },
+    { "Time": 27.0,
+      "Skill": "Ring_01",
+      "SkillInfo":{
+        "Target": "Boss",
+        "DestroyTime": 20.0,
+        "Position": [0.0,0.0,0.0],
+        "Rotation": [0.0,30.0,0.0],
+        "RotateSpeed": 0.0,
+        "Velocity": 3.0,
+        "RingGapNum": 2,
+        "RingRange": 75
+      }
+    },
+    { "Time": 27.5,
+      "Skill": "Ring_01",
+      "SkillInfo":{
+        "Target": "Boss",
+        "DestroyTime": 20.0,
+        "Position": [0.0,0.0,0.0],
+        "Rotation": [0.0,60.0,0.0],
+        "RotateSpeed": 20.0,
+        "Velocity": 3.0,
+        "RingGapNum": 3,
+        "RingRange": 75
+      }
+    },
+    { "Time": 28.0,
+      "Skill": "Laser_00",
+      "SkillInfo":{
+        "Target": "Boss",
+        "DestroyTime": 3.0,
+        "Position": [0.0,0.0,0.0],
+        "Rotation": [0.0,90.0,0.0],
+        "RotateSpeed": 20.0,
+        "RotateTime": 3.0
+      }
+    },
+    { "Time": 30.0,
+      "Skill": "Laser_01",
+      "SkillInfo":{
+        "Target": "Boss",
+        "DestroyTime": 5.0,
+        "Position": [0.0,0.0,0.0],
+        "Rotation": [0.0,90.0,0.0],
+        "RotateSpeed1": 20.0,
+        "RotateTime1": 3.0,
+        "RotateSpeed2": -10.0,
+        "RotateTime2": 2.0
+      }
+    },
+    { "Time": 32.0,
+      "Skill": "Laser_02",
+      "SkillInfo":{
+        "Target": "Boss",
+        "DestroyTime": 10.0,
+        "Position": [0.0,0.0,0.0],
+        "Rotation": [0.0,0.0,0.0],
+        "RotateSpeed": 20.0,
+        "RotateTime": 10.0
+      }
+    }
+  ]
+}

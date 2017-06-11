@@ -6,50 +6,481 @@
     { "Time":65, "Phase":"PlayerAttack"}
   ],
   "BossSkills": [
-    { "Time": 5.0,
-      "Skill": "Bloom_00",
-      "SkillInfo":{
-        "Target": "Boss", 
-        "Position": [0.0,0.0,0.0],
-        "DelayTime": 1.0,
-        "Call_Ring_00":{
-          "Target": "None",
-          "Position": [0.0,0.0,0.0],
-          "Rotation": [0.0,0.0,0.0],
-          "RotateSpeed": 0.0,
-          "Velocity": 8.0
-        }
-      }
-    },
-    { "Time": 6.5,
-      "Skill": "Ring_00",
-      "SkillInfo":{
-        "Target": "Boss",
-        "Position": [0.0,0.0,0.0],
-        "Rotation": [0.0,0.0,0.0],
-        "RotateSpeed": 0.0,
-        "Velocity": 3.0
-      }
-    },
-    { "Time": 7.0,
-      "Skill": "Ring_01",
-      "SkillInfo":{
-        "Target": "Boss",
-        "Position": [0.0,0.0,0.0],
-        "Rotation": [0.0,30.0,0.0],
-        "RotateSpeed": 0.0,
-        "Velocity": 3.0,
-        "RingRange": 75
-      }
-    },
-    { "Time": 8.0,
+    { "Time": 11.5,
       "Skill": "Laser_00",
       "SkillInfo":{
         "Target": "Boss",
+        "DestroyTime": 16.0,
+        "Position": [0.0,0.0,0.0],
+        "Rotation": [0.0,0.0,0.0],
+        "RotateSpeed": 25.0,
+        "RotateTime": 16.0
+      }
+    },
+    { "Time": 13.5,
+      "Skill": "Laser_00",
+      "SkillInfo":{
+        "Target": "Boss",
+        "DestroyTime": 14.0,
+        "Position": [0.0,0.0,0.0],
+        "Rotation": [0.0,-130.0,0.0],
+        "RotateSpeed": 25.0,
+        "RotateTime": 14.0
+      }
+    },
+    { "Time": 15.5,
+      "Skill": "Laser_00",
+      "SkillInfo":{
+        "Target": "Boss",
+        "DestroyTime": 12.0,
+        "Position": [0.0,0.0,0.0],
+        "Rotation": [0.0,190.0,0.0],
+        "RotateSpeed": 25.0,
+        "RotateTime": 12.0
+      }
+    },
+    { "Time": 17.5,
+      "Skill": "Laser_00",
+      "SkillInfo":{
+        "Target": "Boss",
+        "DestroyTime": 10.0,
+        "Position": [0.0,0.0,0.0],
+        "Rotation": [0.0,60.0,0.0],
+        "RotateSpeed": 25.0,
+        "RotateTime": 10.0
+      }
+    },
+    { "Time": 19.5,
+      "Skill": "Laser_00",
+      "SkillInfo":{
+        "Target": "Boss",
+        "DestroyTime": 8.0,
+        "Position": [0.0,0.0,0.0],
+        "Rotation": [0.0,245.0,0.0],
+        "RotateSpeed": 25.0,
+        "RotateTime": 8.0
+      }
+    },
+    { "Time": 21.5,
+      "Skill": "Laser_00",
+      "SkillInfo":{
+        "Target": "Boss",
+        "DestroyTime": 6.0,
+        "Position": [0.0,0.0,0.0],
+        "Rotation": [0.0,25.0,0.0],
+        "RotateSpeed": 25.0,
+        "RotateTime": 6.0
+      }
+    },
+    { "Time": 23.5,
+      "Skill": "Laser_00",
+      "SkillInfo":{
+        "Target": "Boss",
+        "DestroyTime": 4.0,
+        "Position": [0.0,0.0,0.0],
+        "Rotation": [0.0,255.0,0.0],
+        "RotateSpeed": 25.0,
+        "RotateTime": 4.0
+      }
+    },
+    { "Time": 25.5,
+      "Skill": "Laser_00",
+      "SkillInfo":{
+        "Target": "Boss",
+        "DestroyTime": 2.0,
+        "Position": [0.0,0.0,0.0],
+        "Rotation": [0.0,215.0,0.0],
+        "RotateSpeed": 25.0,
+        "RotateTime": 2.0
+      }
+    },
+    { "Time": 27.5,
+      "Skill": "Ring_00",
+      "SkillInfo":{
+        "Target": "Boss",
+        "DestroyTime": 8.0,
+        "Position": [0.0,0.0,0.0],
+        "Rotation": [0.0,0.0,0.0],
+        "RotateSpeed": 0.0,
+        "Velocity": 7.0
+      }
+    },
+    { "Time": 29.8,
+      "Skill": "Ring_00",
+      "SkillInfo":{
+        "Target": "Boss",
+        "DestroyTime": 8.0,
+        "Position": [0.0,0.0,0.0],
+        "Rotation": [0.0,60.0,0.0],
+        "RotateSpeed": 0.0,
+        "Velocity": 7.0
+      }
+    },
+    { "Time": 31.7,
+      "Skill": "Ring_00",
+      "SkillInfo":{
+        "Target": "Boss",
+        "DestroyTime": 8.0,
+        "Position": [0.0,0.0,0.0],
+        "Rotation": [0.0,120.0,0.0],
+        "RotateSpeed": 0.0,
+        "Velocity": 7.0
+      }
+    },
+    { "Time": 33.7,
+      "Skill": "Ring_00",
+      "SkillInfo":{
+        "Target": "Boss",
+        "DestroyTime": 8.0,
+        "Position": [0.0,0.0,0.0],
+        "Rotation": [0.0,0.0,0.0],
+        "RotateSpeed": 0.0,
+        "Velocity": 7.0
+      }
+    },
+    { "Time": 35.7,
+      "Skill": "Ring_01",
+      "SkillInfo":{
+        "Target": "Boss",
+        "DestroyTime": 8.0,
+        "Position": [0.0,0.0,0.0],
+        "Rotation": [0.0,0.0,0.0],
+        "RotateSpeed": 0.0,
+        "Velocity": 7.0,
+        "RingGapNum": 3,
+        "RingRange": 75
+      }
+    },
+    { "Time": 37.7,
+      "Skill": "Ring_01",
+      "SkillInfo":{
+        "Target": "Boss",
+        "DestroyTime": 8.0,
+        "Position": [0.0,0.0,0.0],
+        "Rotation": [0.0,30.0,0.0],
+        "RotateSpeed": 0.0,
+        "Velocity": 7.0,
+        "RingGapNum": 3,
+        "RingRange": 75
+      }
+    },
+    { "Time": 39.7,
+      "Skill": "Ring_01",
+      "SkillInfo":{
+        "Target": "Boss",
+        "DestroyTime": 8.0,
+        "Position": [0.0,0.0,0.0],
+        "Rotation": [0.0,60.0,0.0],
+        "RotateSpeed": 0.0,
+        "Velocity": 7.0,
+        "RingGapNum": 3,
+        "RingRange": 75
+      }
+    },
+    { "Time": 41.6,
+      "Skill": "Ring_01",
+      "SkillInfo":{
+        "Target": "Boss",
+        "DestroyTime": 8.0,
         "Position": [0.0,0.0,0.0],
         "Rotation": [0.0,90.0,0.0],
-        "RotateSpeed": 20.0
+        "RotateSpeed": 0.0,
+        "Velocity": 7.0,
+        "RingGapNum": 3,
+        "RingRange": 75
+      }
+    },
+    { "Time": 43.5,
+      "Skill": "Laser_01",
+      "SkillInfo":{
+        "Target": "Boss",
+        "DestroyTime": 8.0,
+        "Position": [0.0,0.0,0.0],
+        "Rotation": [0.0,0.0,0.0],
+        "RotateSpeed1": 30.0,
+        "RotateTime1": 4.0,
+        "RotateSpeed2": -45.0,
+        "RotateTime2": 4.0
+      }
+    },
+    { "Time": 43.5,
+      "Skill": "Laser_01",
+      "SkillInfo":{
+        "Target": "Boss",
+        "DestroyTime": 8.0,
+        "Position": [0.0,0.0,0.0],
+        "Rotation": [0.0,90.0,0.0],
+        "RotateSpeed1": 30.0,
+        "RotateTime1": 8.0,
+        "RotateSpeed2": 0.0,
+        "RotateTime2": 0.0
+      }
+    },
+    { "Time": 43.5,
+      "Skill": "Laser_01",
+      "SkillInfo":{
+        "Target": "Boss",
+        "DestroyTime": 8.0,
+        "Position": [0.0,0.0,0.0],
+        "Rotation": [0.0,180.0,0.0],
+        "RotateSpeed1": 30.0,
+        "RotateTime1": 4.0,
+        "RotateSpeed2": -45.0,
+        "RotateTime2": 4.0
+      }
+    },
+    { "Time": 43.5,
+      "Skill": "Laser_01",
+      "SkillInfo":{
+        "Target": "Boss",
+        "DestroyTime": 8.0,
+        "Position": [0.0,0.0,0.0],
+        "Rotation": [0.0,270.0,0.0],
+        "RotateSpeed1": 30.0,
+        "RotateTime1": 8.0,
+        "RotateSpeed2": 0.0,
+        "RotateTime2": 0.0
+      }
+    },
+    { "Time": 51.5,
+      "Skill": "Ring_00",
+      "SkillInfo":{
+        "Target": "Boss",
+        "DestroyTime": 12.0,
+        "Position": [0.0,0.0,0.0],
+        "Rotation": [0.0,0.0,0.0],
+        "RotateSpeed": 20.0,
+        "Velocity": 5.0
+      }
+    },
+    { "Time": 53.5,
+      "Skill": "Ring_00",
+      "SkillInfo":{
+        "Target": "Boss",
+        "DestroyTime": 12.0,
+        "Position": [0.0,0.0,0.0],
+        "Rotation": [0.0,0.0,0.0],
+        "RotateSpeed": -20.0,
+        "Velocity": 5.0
+      }
+    },
+    { "Time": 55.5,
+      "Skill": "Ring_00",
+      "SkillInfo":{
+        "Target": "Boss",
+        "DestroyTime": 12.0,
+        "Position": [0.0,0.0,0.0],
+        "Rotation": [0.0,0.0,0.0],
+        "RotateSpeed": 20.0,
+        "Velocity": 5.0
+      }
+    },
+    { "Time": 63.5,
+      "Skill": "Ring_01",
+      "SkillInfo":{
+        "Target": "Boss",
+        "DestroyTime": 8.0,
+        "Position": [0.0,0.0,0.0],
+        "Rotation": [0.0,0.0,0.0],
+        "RotateSpeed": 10.0,
+        "Velocity": 4.0,
+        "RingGapNum": 3,
+        "RingRange": 75
+      }
+    },
+    { "Time": 63.5,
+      "Skill": "Ring_01",
+      "SkillInfo":{
+        "Target": "Boss",
+        "DestroyTime": 8.0,
+        "Position": [0.0,3.0,0.0],
+        "Rotation": [0.0,0.0,0.0],
+        "RotateSpeed": 10.0,
+        "Velocity": 5.0,
+        "RingGapNum": 3,
+        "RingRange": 75
+      }
+    },
+    { "Time": 63.5,
+      "Skill": "Ring_01",
+      "SkillInfo":{
+        "Target": "Boss",
+        "DestroyTime": 8.0,
+        "Position": [0.0,6.0,0.0],
+        "Rotation": [0.0,0.0,0.0],
+        "RotateSpeed": 10.0,
+        "Velocity": 6.0,
+        "RingGapNum": 3,
+        "RingRange": 75
+      }
+    },
+    { "Time": 91.0,
+      "Skill": "Bloom_01",
+      "SkillInfo":{
+        "Target": "Boss", 
+        "DestroyTime": 2.4,
+        "Position": [0.0,0.0,0.0],
+        "DelayTime": 0.2,
+        "RotateSpeed": 60.0,
+        "CallDeltaTime": 0.2,
+        "CallNum": 10,
+        "Call_Ring_00":{
+          "Target": "None",
+          "DestroyTime": 10.0,
+          "Position": [0.0,0.0,0.0],
+          "Rotation": [0.0,0.0,0.0],
+          "RotateSpeed": 0.0,
+          "Velocity": 5.0
+        }
+      }
+    },
+    { "Time": 92.3,
+      "Skill": "Laser_02",
+      "SkillInfo":{
+        "Target": "Boss",
+        "DestroyTime": 7.0,
+        "Position": [23.0,0.0,0.0],
+        "Rotation": [0.0,0.0,0.0],
+        "RotateSpeed": 30.0,
+        "RotateTime": 7.0
+      }
+    },
+    { "Time": 92.3,
+      "Skill": "Ring_00",
+      "SkillInfo":{
+        "Target": "Boss",
+        "DestroyTime": 20.0,
+        "Position": [23.0,0.0,0.0],
+        "Rotation": [0.0,0.0,0.0],
+        "RotateSpeed": 0.0,
+        "Velocity": 4.0
+      }
+    },
+    { "Time": 93.4,
+      "Skill": "Laser_02",
+      "SkillInfo":{
+        "Target": "Boss",
+        "DestroyTime": 7.0,
+        "Position": [0.0,0.0,23.0],
+        "Rotation": [0.0,0.0,0.0],
+        "RotateSpeed": 30.0,
+        "RotateTime": 7.0
+      }
+    },
+    { "Time": 93.4,
+      "Skill": "Ring_00",
+      "SkillInfo":{
+        "Target": "Boss",
+        "DestroyTime": 20.0,
+        "Position": [0.0,0.0,23.0],
+        "Rotation": [0.0,0.0,0.0],
+        "RotateSpeed": 0.0,
+        "Velocity": 4.0
+      }
+    },
+    { "Time": 94.3,
+      "Skill": "Laser_02",
+      "SkillInfo":{
+        "Target": "Boss",
+        "DestroyTime": 7.0,
+        "Position": [-23.0,0.0,0.0],
+        "Rotation": [0.0,0.0,0.0],
+        "RotateSpeed": 30.0,
+        "RotateTime": 7.0
+      }
+    },
+    { "Time": 94.3,
+      "Skill": "Ring_00",
+      "SkillInfo":{
+        "Target": "Boss",
+        "DestroyTime": 20.0,
+        "Position": [-23.0,0.0,0.0],
+        "Rotation": [0.0,0.0,0.0],
+        "RotateSpeed": 0.0,
+        "Velocity": 4.0
+      }
+    },
+    { "Time": 95.5,
+      "Skill": "Laser_02",
+      "SkillInfo":{
+        "Target": "Boss",
+        "DestroyTime": 7.0,
+        "Position": [0.0,0.0,-23.0],
+        "Rotation": [0.0,0.0,0.0],
+        "RotateSpeed": 30.0,
+        "RotateTime": 7.0
+      }
+    },
+    { "Time": 95.5,
+      "Skill": "Ring_00",
+      "SkillInfo":{
+        "Target": "Boss",
+        "DestroyTime": 20.0,
+        "Position": [0.0,0.0,-23.0],
+        "Rotation": [0.0,0.0,0.0],
+        "RotateSpeed": 0.0,
+        "Velocity": 4.0
+      }
+    },
+    { "Time": 97.0,
+      "Skill": "Ring_01",
+      "SkillInfo":{
+        "Target": "Boss",
+        "DestroyTime": 20.0,
+        "Position": [0.0,0.0,0.0],
+        "Rotation": [0.0,0.0,0.0],
+        "RotateSpeed": 20.0,
+        "Velocity": 5.0,
+        "RingGapNum": 2,
+        "RingRange": 90
+      }
+    },
+    { "Time": 98.0,
+      "Skill": "Ring_01",
+      "SkillInfo":{
+        "Target": "Boss",
+        "DestroyTime": 20.0,
+        "Position": [0.0,0.0,0.0],
+        "Rotation": [0.0,0.0,0.0],
+        "RotateSpeed": 20.0,
+        "Velocity": 5.0,
+        "RingGapNum": 3,
+        "RingRange": 60
+      }
+    },
+    { "Time": 99.0,
+      "Skill": "Ring_01",
+      "SkillInfo":{
+        "Target": "Boss",
+        "DestroyTime": 20.0,
+        "Position": [0.0,0.0,0.0],
+        "Rotation": [0.0,0.0,0.0],
+        "RotateSpeed": 20.0,
+        "Velocity": 5.0,
+        "RingGapNum": 4,
+        "RingRange": 45
+      }
+    },
+    { "Time": 104.8,
+      "Skill": "Bloom_01",
+      "SkillInfo":{
+        "Target": "Boss", 
+        "DestroyTime": 2.2,
+        "Position": [0.0,0.0,0.0],
+        "DelayTime": 0.1,
+        "RotateSpeed": 30.0,
+        "CallDeltaTime": 0.3,
+        "CallNum": 7,
+        "Call_Ring_00":{
+          "Target": "None",
+          "DestroyTime": 10.0,
+          "Position": [0.0,0.0,0.0],
+          "Rotation": [0.0,0.0,0.0],
+          "RotateSpeed": 0.0,
+          "Velocity": 5.0
+        }
       }
     }
+
   ]
 }
