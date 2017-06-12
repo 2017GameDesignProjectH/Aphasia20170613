@@ -5,13 +5,25 @@ using DG.Tweening;
 
 public class PlayerController : MonoBehaviour {
 
+    public GameController gameController;
     public GameObject player;
     public GameObject mainCamera;
+    public GameObject DieCamera;
     public Animator PlayerAnimator;
     public JumpSensor JumpSensor;
     public float jumpspeed;
     public float movespeed;
+    public float rollspeed;
+    public float rolltime;
+    public float minRollPeriod;
+    public float minJumpPeriod;
+    public bool rollImmune;
 
+    private float speedtemp;
+    private float rollCD;
+    private float rolltimeCounter;
+    private float jumpCounter;
+    private bool isImmune;
     private bool isHoriMove;
     private bool isVertiMove;
     private Vector3 horiVelocity;
@@ -24,12 +36,19 @@ public class PlayerController : MonoBehaviour {
 
     void Die()
     {
-        Debug.Log("Dieee!");
-        /*PlayerAnimator.SetTrigger("Die");
+        if (isImmune)
+        {
+            return;
+        }
+        Debug.Log("Die!");
+        PlayerAnimator.SetTrigger("Die");
         player.GetComponent<CapsuleCollider>().enabled = false;
         player.GetComponent<Rigidbody>().useGravity = false;
         player.GetComponent<Rigidbody>().velocity = Vector3.zero;
-        this.enabled = false;*/
+        mainCamera.SetActive(false);
+        DieCamera.SetActive(true);
+        gameController.GameOver();
+        this.enabled = false;
     }
 
     void Draw()
@@ -64,14 +83,15 @@ public class PlayerController : MonoBehaviour {
         {
             player.GetComponent<Rigidbody>().velocity = Vector3.zero;
         }
-        // Reset Y axis velocity to origin
-        //player.GetComponent<Rigidbody>().velocity = new Vector3(player.GetComponent<Rigidbody>().velocity.x, this.YVelocity, player.GetComponent<Rigidbody>().velocity.z);
+        player.GetComponent<Rigidbody>().velocity = new Vector3(player.GetComponent<Rigidbody>().velocity.x,
+            this.YVelocity, player.GetComponent<Rigidbody>().velocity.z);
         PlayerAnimator.SetFloat("velocity", player.GetComponent<Rigidbody>().velocity.magnitude);
     }
 
     // Use this for initialization
     void Start () {
-		
+        speedtemp = movespeed;
+        isImmune = false;
 	}
 
     // Update is called once per frame
@@ -79,12 +99,40 @@ public class PlayerController : MonoBehaviour {
         // GET INPUT AXIS
         float vertical = Input.GetAxis("Vertical");
         float horizontal = Input.GetAxis("Horizontal");
+
+        // 翻滾
+        if (rollCD > 0)
+        {
+            rollCD -= Time.deltaTime;
+        } else if ((Input.GetKeyDown(KeyCode.Mouse1)||(Input.GetKeyDown(KeyCode.Joystick1Button5))) && JumpSensor.IsCanJump())
+        {
+            movespeed = rollspeed;
+            PlayerAnimator.SetTrigger("Dash");
+            rollCD = minRollPeriod;
+            rolltimeCounter = rolltime;
+            if (rollImmune)
+            {
+                isImmune = true;
+            }
+        }
+        // 翻滾持續時間
+        if (rolltimeCounter > 0)
+        {
+            rolltimeCounter -= Time.deltaTime;
+        } else
+        {
+            movespeed = speedtemp;
+            isImmune = false;
+        }
+
         // GET DIRECTION
         Vector3 forward = mainCamera.transform.forward;
         Vector3 right = mainCamera.transform.right;
+
         //Calibrate Y AXIS 
         forward.y = 0;
         right.y = 0;
+
         // GET DIRECTION UNIT VECTOR
         forward.Normalize();
         right.Normalize();
@@ -98,15 +146,18 @@ public class PlayerController : MonoBehaviour {
         this.YVelocity = player.GetComponent<Rigidbody>().velocity.y;
 
         // check jump
-        if ((Input.GetKey(KeyCode.Space) || Input.GetKey(KeyCode.Joystick1Button1)) && JumpSensor.IsCanJump())
+
+        if (jumpCounter > 0)
+        {
+            jumpCounter -= Time.deltaTime;
+        } else if ((Input.GetKeyDown(KeyCode.Space) || Input.GetKeyDown(KeyCode.Joystick1Button1)) && JumpSensor.IsCanJump())
         {
             YVelocity = jumpspeed;
             PlayerAnimator.SetFloat("jumpspeed", 1);
-        }
-        else
+            jumpCounter = minJumpPeriod;
+        } else
         {
             PlayerAnimator.SetFloat("jumpspeed", 0);
-
         }
 
         if (vertical > 0)
@@ -136,4 +187,15 @@ public class PlayerController : MonoBehaviour {
         Draw();
 
     }
+
+	public void Reset(){
+		player.GetComponent<CapsuleCollider>().enabled = true;
+		player.GetComponent<Rigidbody>().useGravity = true;
+		player.GetComponent<Rigidbody>().velocity = Vector3.zero;
+		mainCamera.SetActive(true);
+		DieCamera.GetComponent<DieCameraController> ().Reset ();
+		DieCamera.SetActive(false);
+		PlayerAnimator.Play ("Idle");
+		this.enabled = true;
+	}
 }

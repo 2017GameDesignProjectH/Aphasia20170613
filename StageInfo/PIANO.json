@@ -1,10 +1,6 @@
 {
   "Name": "P.I.A.N.O",
   "Music": "Synthesia Undertale - Megalovania 82,000  Notes Black MIDI",
-  "BattlePhase":[
-    { "Time":0, "Phase":"BossAttack"},
-    { "Time":65, "Phase":"PlayerAttack"}
-  ],
   "BossSkills": [
     { "Time": 11.5,
       "Skill": "Laser_00",
@@ -1162,118 +1158,185 @@
         "Position": [0.0,0.0,0.0],
         "Rotation": [0.0,0.0,0.0],
         "RotateSpeed": 0.0,
-        "Velocity": 6.0
+        "Velocity": 9.0
       }
     },
     { "Time": 160.6,
       "Skill": "Ring_00",
       "SkillInfo":{
         "Target": "Boss",
-        "DestroyTime": 7.9,
+        "DestroyTime": 5.9,
         "Position": [-8.8,0.0,-9.7],
         "Rotation": [0.0,0.0,0.0],
         "RotateSpeed": 0.0,
-        "Velocity": 6.0
+        "Velocity": 9.0
       }
     },
     { "Time": 160.7,
       "Skill": "Ring_00",
       "SkillInfo":{
         "Target": "Boss",
-        "DestroyTime": 7.8,
+        "DestroyTime": 5.8,
         "Position": [-19.1,0.0,-4.8],
         "Rotation": [0.0,0.0,0.0],
         "RotateSpeed": 0.0,
-        "Velocity": 6.0
+        "Velocity": 9.0
       }
     },
     { "Time": 160.8,
       "Skill": "Ring_00",
       "SkillInfo":{
         "Target": "Boss",
-        "DestroyTime": 7.7,
+        "DestroyTime": 5.7,
         "Position": [-21.9,0.0,7.3],
         "Rotation": [0.0,0.0,0.0],
         "RotateSpeed": 0.0,
-        "Velocity": 6.0
+        "Velocity": 9.0
       }
     },
     { "Time": 160.9,
       "Skill": "Ring_00",
       "SkillInfo":{
         "Target": "Boss",
-        "DestroyTime": 7.6,
+        "DestroyTime": 5.6,
         "Position": [-2.9,0.0,20.6],
         "Rotation": [0.0,0.0,0.0],
         "RotateSpeed": 0.0,
-        "Velocity": 6.0
+        "Velocity": 9.0
       }
     },
     { "Time": 161.0,
       "Skill": "Ring_00",
       "SkillInfo":{
         "Target": "Boss",
-        "DestroyTime": 7.5,
+        "DestroyTime": 5.5,
         "Position": [20.0,0.0,8.9],
         "Rotation": [0.0,0.0,0.0],
         "RotateSpeed": 0.0,
-        "Velocity": 6.0
+        "Velocity": 9.0
       }
     },
     { "Time": 161.1,
       "Skill": "Ring_00",
       "SkillInfo":{
         "Target": "Boss",
-        "DestroyTime": 7.4,
+        "DestroyTime": 5.4,
         "Position": [23.2,0.0,-4.9],
         "Rotation": [0.0,0.0,0.0],
         "RotateSpeed": 0.0,
-        "Velocity": 6.0
+        "Velocity": 9.0
       }
     },
     { "Time": 161.2,
       "Skill": "Ring_00",
       "SkillInfo":{
         "Target": "Boss",
-        "DestroyTime": 7.3,
+        "DestroyTime": 5.3,
         "Position": [17.7,0.0,-14.1],
         "Rotation": [0.0,0.0,0.0],
         "RotateSpeed": 0.0,
-        "Velocity": 6.0
+        "Velocity": 9.0
       }
     },
     { "Time": 161.3,
       "Skill": "Ring_00",
       "SkillInfo":{
         "Target": "Boss",
-        "DestroyTime": 7.2,
+        "DestroyTime": 5.2,
         "Position": [6.5,0.0,-31.0],
         "Rotation": [0.0,0.0,0.0],
         "RotateSpeed": 0.0,
-        "Velocity": 6.0
+        "Velocity": 9.0
       }
     },
     { "Time": 161.4,
       "Skill": "Ring_00",
       "SkillInfo":{
         "Target": "Boss",
-        "DestroyTime": 7.1,
+        "DestroyTime": 5.1,
         "Position": [-8.6,0.0,-30.7],
         "Rotation": [0.0,0.0,0.0],
         "RotateSpeed": 0.0,
-        "Velocity": 6.0
+        "Velocity": 9.0
       }
     },
     { "Time": 161.5,
       "Skill": "Ring_00",
       "SkillInfo":{
         "Target": "Boss",
-        "DestroyTime": 7.0,
+        "DestroyTime": 5.0,
         "Position": [-23.2,0.0,-26.1],
         "Rotation": [0.0,0.0,0.0],
         "RotateSpeed": 0.0,
-        "Velocity": 6.0
+        "Velocity": 9.0
       }
     }
+  ],
+  "PlayerSkills": [
+    { "PrepareTime": 64.5,
+      "SkillList":[
+        { "Time": 67.7, "Shape": "Square", "HideShape": "Circle"},
+        { "Time": 67.9, "Shape": "Circle", "HideShape": "Circle"},
+        { "Time": 68.2, "Shape": "Cross", "HideShape": "Circle"},
+        { "Time": 68.5, "Shape": "Cross", "HideShape": "Circle"},
+        { "Time": 68.9, "Shape": "Circle", "HideShape": "Circle"},
+        { "Time": 69.3, "Shape": "Square", "HideShape": "Circle"},
+        { "Time": 69.7, "Shape": "Triangle", "HideShape": "Circle"},
+        { "Time": 70.0, "Shape": "Cross", "HideShape": "Circle"},
+        { "Time": 70.5, "Shape": "Circle", "HideShape": "Circle"},
+        { "Time": 71.0, "Shape": "Cross", "HideShape": "Circle"},
+        { "Time": 71.5, "Shape": "Triangle", "HideShape": "Circle"}
+      ],
+      "Mode": "Continue"
+    },
+    { "PrepareTime": 80.2,
+      "SkillList":[
+        { "Time": 83.4, "Shape": "Triangle", "HideShape": "Cross"},
+        { "Time": 83.9, "Shape": "Cross", "HideShape": "Cross"},
+        { "Time": 84.2, "Shape": "Circle", "HideShape": "Cross"},
+        { "Time": 84.5, "Shape": "Cross", "HideShape": "Cross"},
+        { "Time": 84.8, "Shape": "Triangle", "HideShape": "Cross"},
+        { "Time": 85.3, "Shape": "Square", "HideShape": "Cross"},
+        { "Time": 85.8, "Shape": "Circle", "HideShape": "Cross"},
+        { "Time": 86.3, "Shape": "Cross", "HideShape": "Cross"},
+        { "Time": 86.8, "Shape": "Cross", "HideShape": "Cross"},
+        { "Time": 87.2, "Shape": "Circle", "HideShape": "Cross"},
+        { "Time": 87.5, "Shape": "Square", "HideShape": "Cross"}
+      ],
+      "Mode": "Back"
+    },
+    { "PrepareTime": 166.7,
+      "SkillList":[
+        { "Time": 169.4, "Shape": "Triangle", "HideShape": "Square"},
+        { "Time": 169.7, "Shape": "Square", "HideShape": "Square"},
+        { "Time": 170.2, "Shape": "Circle", "HideShape": "Square"},
+        { "Time": 170.5, "Shape": "Circle", "HideShape": "Square"},
+        { "Time": 170.8, "Shape": "Triangle", "HideShape": "Square"},
+        { "Time": 171.3, "Shape": "Square", "HideShape": "Triangle"},
+        { "Time": 171.8, "Shape": "Cross", "HideShape": "Triangle"},
+        { "Time": 172.3, "Shape": "Square", "HideShape": "Triangle"},
+        { "Time": 172.8, "Shape": "Cross", "HideShape": "Triangle"},
+        { "Time": 173.2, "Shape": "Cross", "HideShape": "Triangle"},
+        { "Time": 173.5, "Shape": "Cross", "HideShape": "Triangle"}
+      ],
+      "Mode": "Continue"
+    },
+    { "PrepareTime": 182.7,
+      "SkillList":[
+        { "Time": 185.4, "Shape": "Cross", "HideShape": "Cross"},
+        { "Time": 185.9, "Shape": "Square", "HideShape": "Square"},
+        { "Time": 186.2, "Shape": "Square", "HideShape": "Triangle"},
+        { "Time": 186.5, "Shape": "Triangle", "HideShape": "Circle"},
+        { "Time": 186.8, "Shape": "Triangle", "HideShape": "Cross"},
+        { "Time": 187.3, "Shape": "Circle", "HideShape": "Square"},
+        { "Time": 187.8, "Shape": "Square", "HideShape": "Triangle"},
+        { "Time": 188.3, "Shape": "Cross", "HideShape": "Circle"},
+        { "Time": 188.8, "Shape": "Cross", "HideShape": "Cross"},
+        { "Time": 189.2, "Shape": "Triangle", "HideShape": "Square"},
+        { "Time": 189.5, "Shape": "Square", "HideShape": "Triangle"}
+      ],
+      "Mode": "End"
+    }
+    
   ]
 }

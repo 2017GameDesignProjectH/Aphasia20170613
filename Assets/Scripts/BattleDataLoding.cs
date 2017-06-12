@@ -40,6 +40,15 @@ public class BattleDataLoding : MonoBehaviour {
 				jsonData["BossSkills"][i]["SkillInfo"]
 			);
 		}
+		//Debug.Log (jsonData ["PlayerSkills"].Count);
+		stageInfo.PlayerSkills = new PlayerSkill[jsonData ["PlayerSkills"].Count];
+		for (int i = 0; i < jsonData ["PlayerSkills"].Count; i++) {
+			stageInfo.PlayerSkills [i] = new PlayerSkill (
+				(float)(double)jsonData ["PlayerSkills"] [i] ["PrepareTime"],
+				jsonData ["PlayerSkills"] [i] ["SkillList"],
+				(string)jsonData["PlayerSkills"][i]["Mode"]
+			);
+		}
 	}
 
 }
@@ -54,6 +63,7 @@ public class StageInfo{
 	public string StageName;
 	public string Music;
 	public BossSkill[] BossSkills;
+	public PlayerSkill[] PlayerSkills;
 }
 
 [System.Serializable]
@@ -67,4 +77,17 @@ public class BossSkill{
 	public float Time;
 	public string SkillName;
 	public JsonData SkillInfo;
+}
+
+[System.Serializable]
+public class PlayerSkill{
+	public PlayerSkill(){}
+	public PlayerSkill(float prepareTime, JsonData skillList, string mode){
+		PrepareTime = prepareTime;
+		SkillList = skillList;
+		Mode = mode;
+	}
+	public float PrepareTime;
+	public JsonData SkillList;
+	public string Mode;
 }

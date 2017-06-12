@@ -15,8 +15,16 @@ public class MenuController : MonoBehaviour {
 	}
 
 
+	public void Invoke(){
+		this.onStart.Invoke ();
+	}
+
 	public void StartGame(){
 		SceneManager.LoadScene ("Demo");
+	}
+
+	public void QuitGame(){
+		SceneManager.LoadScene ("Menu");
 	}
 
 }
