@@ -17,7 +17,7 @@ public class PlayerController : MonoBehaviour {
     public float rolltime;
     public float minRollPeriod;
     public float minJumpPeriod;
-    public bool rollImmune;
+	public bool rollImmune;
 
     private float speedtemp;
     private float rollCD;
@@ -100,6 +100,9 @@ public class PlayerController : MonoBehaviour {
         float vertical = Input.GetAxis("Vertical");
         float horizontal = Input.GetAxis("Horizontal");
 
+		if (Input.GetKeyDown (KeyCode.Joystick1Button4) || Input.GetKeyDown(KeyCode.Alpha8)) {
+			rollImmune = !rollImmune;
+		}
         // 翻滾
         if (rollCD > 0)
         {

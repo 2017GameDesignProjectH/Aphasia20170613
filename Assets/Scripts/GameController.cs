@@ -64,6 +64,9 @@ public class GameController : MonoBehaviour {
 		if (stageMusic.time >= 221f) {
 			SceneManager.LoadScene ("Menu");
 		}
+		if (Input.GetKeyDown (KeyCode.JoystickButton6) || Input.GetKeyDown(KeyCode.Alpha9)) {
+			playerSkillController.enabled = !playerSkillController.enabled;
+		}
 	}
 
 	public void StageStart(){
@@ -75,7 +78,7 @@ public class GameController : MonoBehaviour {
 		playerSkillController.Initializing (battleDataLoading.stageInfo, stageMusic);
 		barrier.gameObject.SetActive (true);
 		this.GetComponent<SphereCollider> ().enabled = false;
-		//stageMusic.time = 180f;
+		//stageMusic.time = 50f;
 	}
 
 	void OnTriggerEnter(Collider other){

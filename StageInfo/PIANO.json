@@ -317,9 +317,9 @@
         "DestroyTime": 2.4,
         "Position": [0.0,0.0,0.0],
         "DelayTime": 0.2,
-        "RotateSpeed": 60.0,
+        "RotateSpeed": 50.0, //60
         "CallDeltaTime": 0.2,
-        "CallNum": 10,
+        "CallNum": 8, //10
         "Call_Ring_00":{
           "Target": "None",
           "DestroyTime": 10.0,
