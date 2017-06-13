@@ -34,6 +34,7 @@ public class Bloom_01 : BasicSkillClass {
 				if (timer <= 0f && callNum > 0) {
 					GameObject obj = (GameObject)Instantiate (Resources.Load ("Prefabs/Skills/Ring_00"));
 					obj.SendMessage ("SetSkillInfo", _skillInfo ["Call_Ring_00"]);
+					obj.transform.parent = GameObject.Find ("BossController/Skills").transform;
 					obj.transform.position = this.transform.position;
 					obj.transform.rotation = this.transform.rotation;
 					timer = callDeltaTime;

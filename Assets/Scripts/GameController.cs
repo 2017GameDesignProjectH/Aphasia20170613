@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 
 public class GameController : MonoBehaviour {
 
@@ -20,9 +21,11 @@ public class GameController : MonoBehaviour {
 	public AudioSource DieMusic;
 
 	public Canvas continueUI;
+	public Canvas endUI;
+	public bool end = false;
 
 	public float latestTime = 0f;
-	public float[] savingPoint = new float[]{ 0f, 90f };
+	public float[] savingPoint;
 	public Vector3 rebornPosition = new Vector3(0f,0f,-23f);
 
     public void GameOver(){
@@ -47,9 +50,20 @@ public class GameController : MonoBehaviour {
 	}
 */
 
+	void Start(){
+		Time.timeScale = 1f;
+	}
+
 	// Update is called once per frame
 	void Update () {
 		musicTime = stageMusic.time;
+		if (!end && stageMusic.time >= 198f) {
+			endUI.gameObject.SetActive (true);
+			end = true;
+		}
+		if (stageMusic.time >= 221f) {
+			SceneManager.LoadScene ("Menu");
+		}
 	}
 
 	public void StageStart(){
@@ -61,7 +75,7 @@ public class GameController : MonoBehaviour {
 		playerSkillController.Initializing (battleDataLoading.stageInfo, stageMusic);
 		barrier.gameObject.SetActive (true);
 		this.GetComponent<SphereCollider> ().enabled = false;
-		//stageMusic.time = 40f;
+		//stageMusic.time = 180f;
 	}
 
 	void OnTriggerEnter(Collider other){
@@ -71,9 +85,11 @@ public class GameController : MonoBehaviour {
 	}
 
 	public void Reset(){
+		stageMusic.Play ();
 		for (int i = 0; i < savingPoint.Length; i++) {
 			if (savingPoint [i] > latestTime) {
 				stageMusic.time = savingPoint [i - 1];
+				break;
 			}
 			if (i == savingPoint.Length - 1) {
 				stageMusic.time = savingPoint [i];
@@ -85,6 +101,5 @@ public class GameController : MonoBehaviour {
 		continueUI.gameObject.SetActive (false);
 		moz.transform.position = rebornPosition;
 		Time.timeScale = 1f;
-		stageMusic.Play ();
 	}
 }

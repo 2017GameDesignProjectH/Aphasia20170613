@@ -26,6 +26,7 @@ public class Bloom_00 : BasicSkillClass {
 			if (delayTime <= 0f) {
 				GameObject obj = (GameObject)Instantiate (Resources.Load ("Prefabs/Skills/Ring_00"));
 				obj.SendMessage ("SetSkillInfo", _skillInfo ["Call_Ring_00"]);
+				obj.transform.parent = GameObject.Find ("BossController/skills").transform;
 				obj.transform.position = this.transform.position;
 			}
 			delayTime = delayTime - Time.fixedDeltaTime;
